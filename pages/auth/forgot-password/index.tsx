@@ -9,7 +9,7 @@ import { ArrowLeft } from "../../../components/icons";
 import { kiBrosDarkBlueColor } from "../../../utils/colors";
 
 // Logo Path
-import logo from "../../../public/assets/images/kibros-logo.png";
+import logo from "../../../public/assets/images/logo/kibros-logo.png";
 
 const ForgotPassword = () => {
   return (

@@ -11,7 +11,7 @@ import styles from "./login.module.css";
 import { iconColor } from "../../../utils/colors";
 
 //Logo Path
-import logo from "../../../public/assets/images/kibros-logo.png";
+import logo from "../../../public/assets/images/logo/kibros-logo.png";
 
 const Login = () => {
   const [isPasswordShown, setIsPasswordShown] = useState(false);
