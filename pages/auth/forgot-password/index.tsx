@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AuthorizationRoutes } from "../../../routes";
 
-const ForgotPassword = () => {
+function ForgotPassword() {
   const router = useRouter();
 
   return (
@@ -55,6 +55,6 @@ const ForgotPassword = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ForgotPassword;

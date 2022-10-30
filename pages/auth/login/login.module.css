@@ -1,5 +1,5 @@
 .container {
-  @apply flex h-screen w-screen items-center justify-center bg-primary sm:flex sm:h-screen sm:w-screen sm:items-center sm:justify-center sm:bg-secondary;
+  @apply flex h-screen w-screen items-center justify-center xs:bg-google sm:flex sm:h-screen sm:w-screen sm:items-center sm:justify-center sm:bg-secondary md:bg-success lg:bg-primary;
 }
 
 .card {
