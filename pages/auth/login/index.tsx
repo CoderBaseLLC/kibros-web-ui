@@ -12,11 +12,16 @@ import { iconColor } from "../../../utils/colors";
 
 //Logo Path
 import logo from "../../../public/assets/images/logo/kibros-logo.png";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { AuthorizationRoutes } from "../../../routes";
 
-const Login = () => {
+function Login() {
   const [isPasswordShown, setIsPasswordShown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isUnsuccessfull, setIsUnsuccessfull] = useState(false);
+
+  const router = useRouter();
 
   const showPassword = () => {
     setIsPasswordShown((current) => !current);
@@ -67,7 +72,14 @@ const Login = () => {
             </div>
             <div className={styles.forgetPassword__container}>
               <div className={styles.forgetPassword__content}>
-                <p>نسيت كلمة المرور؟</p>
+                <p
+                  className="cursor-pointer"
+                  onClick={() =>
+                    router.push(AuthorizationRoutes.forgotPassword)
+                  }
+                >
+                  نسيت كلمة المرور؟
+                </p>
               </div>
             </div>
             <button className={styles.submit__button}>تسجيل الدخول</button>
@@ -111,16 +123,21 @@ const Login = () => {
               />
             </div>
             <div className={styles.register__container}>
-              <p className={styles.register__text}>
+              <div className={styles.register__text}>
                 جديد على منصتنا؟{" "}
-                <span className={styles.register__actionText}>انشاء حساب</span>
-              </p>
+                <span
+                  className={styles.register__actionText}
+                  onClick={() => router.push(AuthorizationRoutes.register)}
+                >
+                  انشاء حساب
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Login;

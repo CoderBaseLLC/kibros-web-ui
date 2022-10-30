@@ -10,8 +10,13 @@ import { kiBrosDarkBlueColor } from "../../../utils/colors";
 
 // Logo Path
 import logo from "../../../public/assets/images/logo/kibros-logo.png";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { AuthorizationRoutes } from "../../../routes";
 
 const ForgotPassword = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -39,7 +44,12 @@ const ForgotPassword = () => {
           <button className={styles.submit__button}>ارسال</button>
           <div className={styles.previousPage__container}>
             <ArrowLeft size={20} color={kiBrosDarkBlueColor} />
-            <p>تسجيل الدخول</p>
+            <p
+              className="cursor-pointer"
+              onClick={() => router.push(AuthorizationRoutes.login)}
+            >
+              تسجيل الدخول
+            </p>
           </div>
         </div>
       </div>

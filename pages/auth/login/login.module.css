@@ -1,5 +1,5 @@
 .container {
-  @apply flex h-screen w-screen items-center justify-center bg-primary;
+  @apply flex h-screen w-screen items-center justify-center bg-primary sm:flex sm:h-screen sm:w-screen sm:items-center sm:justify-center sm:bg-secondary;
 }
 
 .card {
@@ -115,5 +115,5 @@
 }
 
 .register__actionText {
-  @apply text-secondary;
+  @apply cursor-pointer text-secondary;
 }
